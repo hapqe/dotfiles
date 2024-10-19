@@ -37,6 +37,13 @@ lvim.lsp.automatic_servers_installation = false
 
 lvim.plugins = {
   {
+    -- markown preview
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
+  {
     -- multiple cursors with <c-n>
     'mg979/vim-visual-multi'
   },
